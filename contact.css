@@ -122,17 +122,35 @@ main {
     color: #0073e6;
 }
 
-/* Footer Styles */
+/* Footer Styling */
 footer {
-    text-align: center;
-    padding: 20px;
     background-color: #333;
-    color: #fff;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
 
 footer p {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: bold;
+    color: #dcdcdc; /* Light gray text for a subtle effect */
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer p {
+        font-size: 1rem; /* Slightly smaller font for smaller screens */
+    }
+}
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {

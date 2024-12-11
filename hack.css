@@ -161,40 +161,34 @@ p {
 }
 
 /* Footer Styling */
-/* General Footer Styles */
 footer {
     background-color: #333;
     color: white;
     padding: 20px 0;
     text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+footer p {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: bold;
+    color: #dcdcdc; /* Light gray text for a subtle effect */
 }
 
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 15px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 0;
+    }
+
+    footer p {
+        font-size: 1rem; /* Slightly smaller font for smaller screens */
+    }
 }
 
-.social-link {
-    color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-link:hover {
-    color: #ff6600;
-    transform: scale(1.2);
-}
 
 
 /* Responsive Design for Smaller Screens */
