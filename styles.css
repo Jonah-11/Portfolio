@@ -359,10 +359,12 @@ footer {
 
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
     .intro-container {
         flex-direction: column;
         align-items: center;
+        gap: 0; /* Adjust gap to ensure no overlay */
     }
 
     .intro-text {
@@ -375,13 +377,33 @@ footer {
         margin-top: 1rem;
     }
 
+    /* Adjust the width of the blocks for smaller screens */
     .blocks {
         flex-direction: column;
         align-items: center;
+        margin: 1rem 0; /* Added margin to space out the blocks */
     }
 
     .block {
-        width: 80%;
-        margin-bottom: 2rem;
+        width: 80%; /* Reducing width on mobile */
+        margin-bottom: 2rem; /* Adding space between blocks */
+    }
+
+    /* Fixed navbar padding */
+    body {
+        padding-top: 90px; /* Ensure space below fixed navbar on small screens */
+    }
+
+    /* Adjusting font sizes for small screens */
+    .intro-title {
+        font-size: 2rem; /* Smaller title font size */
+    }
+
+    .intro-subtitle {
+        font-size: 1.2rem; /* Smaller subtitle font size */
+    }
+
+    #role {
+        font-size: 1.5rem; /* Adjust role font size */
     }
 }
