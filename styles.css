@@ -7,6 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #000; /* Dark background for particles effect */
+    overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* Header Section */
@@ -19,15 +20,17 @@ header {
     color: white;
     background-color: transparent;
     position: relative; /* For particles effect layering */
+    width: 100%; /* Ensure header doesn't overflow */
 }
 
 /* Intro Text Styling */
 .intro-container {
     display: flex;
     justify-content: space-between;
-    gap: 200px;
+    gap: 40px; /* Reduce the gap */
     width: 100%;
     max-width: 1200px;
+    padding: 0 20px; /* Ensure no overflow on smaller screens */
 }
 
 .intro-text {
@@ -86,28 +89,6 @@ header {
     background-color: #000; /* Optional for better starry sky effect */
 }
 
-/* Shooting Star Animation */
-@keyframes shootingStar {
-    0% {
-        transform: translateX(0) translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(100vw) translateY(50vh);
-        opacity: 0;
-    }
-}
-
-.shooting-star {
-    position: absolute;
-    width: 2px;
-    height: 80px;
-    background: linear-gradient(white, transparent);
-    animation: shootingStar 2s ease-in-out infinite;
-    opacity: 0;
-    transform: translateX(0) translateY(0);
-}
-
 /* Blocks Section */
 .blocks {
     display: flex;
@@ -115,6 +96,7 @@ header {
     margin: 3rem 0;
     width: 100%;
     max-width: 1200px;
+    padding: 0 20px; /* Ensure no horizontal overflow */
 }
 
 .block {
@@ -153,6 +135,7 @@ nav {
     z-index: 1000; /* Ensures the navbar stays above other content */
     display: flex;
     justify-content: flex-end; /* Aligns the links to the right */
+    width: 100%;
 }
 
 nav a {
@@ -172,30 +155,6 @@ body {
     padding-top: 80px; /* Ensure the body content doesn't get hidden behind the navbar */
 }
 
-/* Navbar Brand */
-.navbar-brand {
-    color: white;
-    font-family: 'Dancing Script', cursive;  /* Apply the signature font */
-    font-size: 2rem;  /* Adjust size as needed */
-    font-weight: bold;
-    margin-right: auto;
-    padding-left: 20px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #ff6600; /* Change link color on hover */
-}
-
-
-
 /* Education Section */
 .education-description {
     margin: 40px 0;
@@ -203,124 +162,6 @@ nav a:hover {
     font-family: 'Arial', sans-serif;
 }
 
-.education-description h3 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #ff6600; /* Highlighting the section title */
-    border-bottom: 2px solid #ff6600;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-}
-
-.education-description p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    line-height: 1.6;
-    color: #dcdcdc; /* Light gray for the description */
-}
-
-.school-tree {
-    list-style: none;
-    padding-left: 20px;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #ddd;
-}
-
-.school-tree li {
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.school-tree li::before {
-    content: "•";
-    position: absolute;
-    left: -20px;
-    color: #ff6600;
-    font-size: 1.2rem;
-}
-
-.school-name {
-    font-weight: bold;
-    color: #ff6600; /* Bold school names in a distinct color */
-}
-
-.degree, .course {
-    font-style: italic;
-    color: #fff;
-}
-
-.school-tree ul {
-    margin-left: 20px;
-    margin-top: 10px;
-    color: #b0b0b0;
-}
-
-/* Hover Effect for Tree Items */
-.school-tree li:hover {
-    background-color: rgba(255, 102, 0, 0.1);
-    padding-left: 10px;
-    transition: padding-left 0.3s ease, background-color 0.3s ease;
-}
-
-.school-tree li:hover .school-name {
-    color: #ff4500;
-}
-
-.school-tree li:hover .degree,
-.school-tree li:hover .course {
-    color: #ffcc00;
-}
-
-/* Block Backgrounds */
-#mechanical-engineer,
-#web-developer,
-#ethical-hacker {
-    background-size: cover;
-    background-position: center;
-}
-
-#mechanical-engineer {
-    background-image: url('mechanical-background.jpg');
-}
-
-#web-developer {
-    background-image: url('web-dev-background.jpg');
-}
-
-#ethical-hacker {
-    background-image: url('ethical-hacking-background.jpg');
-}
-
-/* Explore Button */
-.explore {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #ff6600;
-    border-radius: 30px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.explore:hover {
-    background-color: #ff4500;
-}
-
-/* Particles Background */
-#particles-js {
-    position: absolute;   /* Positioning to cover the whole page */
-    top: 0;
-    left: 0;
-    width: 100%;          /* Full width of the page */
-    height: 100%;         /* Full height of the page */
-    z-index: -1;          /* Makes sure particles are behind the content */
-    background-color: #000; /* Optional, if you want a dark background for particles */
-}
-
-/* Footer Styling */
 /* Footer Styling */
 footer {
     background-color: #333; /* Dark background */
@@ -355,16 +196,13 @@ footer {
     transform: scale(1.2); /* Slight zoom on hover */
 }
 
-
-
-
-/* Responsive Design */
 /* Responsive Design */
 @media (max-width: 768px) {
     .intro-container {
         flex-direction: column;
         align-items: center;
-        gap: 0; /* Adjust gap to ensure no overlay */
+        gap: 0; /* Ensure no gap */
+        padding: 0 20px; /* Padding to prevent overflow */
     }
 
     .intro-text {
@@ -377,33 +215,31 @@ footer {
         margin-top: 1rem;
     }
 
-    /* Adjust the width of the blocks for smaller screens */
     .blocks {
         flex-direction: column;
         align-items: center;
-        margin: 1rem 0; /* Added margin to space out the blocks */
+        margin: 1rem 0;
+        padding: 0 20px; /* Prevent horizontal overflow */
     }
 
     .block {
-        width: 80%; /* Reducing width on mobile */
-        margin-bottom: 2rem; /* Adding space between blocks */
+        width: 80%; /* Make blocks smaller on mobile */
+        margin-bottom: 2rem;
     }
 
-    /* Fixed navbar padding */
     body {
-        padding-top: 90px; /* Ensure space below fixed navbar on small screens */
+        padding-top: 90px; /* Adjust body padding for small screens */
     }
 
-    /* Adjusting font sizes for small screens */
     .intro-title {
-        font-size: 2rem; /* Smaller title font size */
+        font-size: 2rem;
     }
 
     .intro-subtitle {
-        font-size: 1.2rem; /* Smaller subtitle font size */
+        font-size: 1.2rem;
     }
 
     #role {
-        font-size: 1.5rem; /* Adjust role font size */
+        font-size: 1.5rem;
     }
 }
