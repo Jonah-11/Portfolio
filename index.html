@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Jonathan Edwards' Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-        <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-        <!-- Add signature font from Google Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    </head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Edwards' Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
 <body>
-    <!-- Particles Background (Full Screen) -->
+    <!-- Particles Background -->
     <div id="particles-js"></div>
 
     <!-- Header Section -->
     <header>
-
         <nav>
             <div class="navbar-brand">
                 <span>My Online Portfolio</span>
             </div>
-            <a href="index.html">Home</a>
-            <a href="mech.html">Engineering</a>
-            <a href="web.html">Web Development</a>
-            <a href="hack.html">Ethical Hacking</a>
-            <a href="contact.html">Contact</a>
+            <div class="menu-icon" id="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="mech.html">Engineering</a>
+                <a href="web.html">Web Development</a>
+                <a href="hack.html">Ethical Hacking</a>
+                <a href="contact.html">Contact</a>
+            </div>
         </nav>
 
         <div class="intro-container">
@@ -36,10 +38,8 @@
                     Meet <span class="highlight" id="name"></span>
                 </p>
                 <p class="intro-subtitle">
-                    He is  <span id="role">a Web Developer</span> <!-- Role changes dynamically -->
+                    He is  <span id="role">a Web Developer</span>
                 </p>
-                
-                <!-- Education Description -->
                 <div class="education-description">
                     <h3>Education & Achievements</h3>
                     <p class="intro-text">
@@ -68,8 +68,6 @@
                         </li>
                     </ul>
                 </div>
-
-                
             </div>
         
             <!-- Right Side: Profile Picture -->
@@ -77,9 +75,7 @@
                 <img src="moi.jpg" alt="Jonathan Edwards" class="profile-picture">
             </div>
         </div>
-        
     </header>
-
 
     <!-- Main Content Section -->
     <section class="blocks">
@@ -109,9 +105,16 @@
     <footer>
         <p>&copy; 2024 Jonathan Edwards. All Rights Reserved.</p>
     </footer>
-    
-    <!-- External particles config -->
+
     <script src="particles-config.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        // Toggle Navigation Menu
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
