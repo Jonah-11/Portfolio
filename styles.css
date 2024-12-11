@@ -55,7 +55,7 @@ header {
 #role {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #ff6600;
+    color: #ff6600; /* Orange color for role */
 }
 
 /* Profile Picture Styling */
@@ -154,7 +154,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff6600;
+    color: #ff6600; /* Orange hover color */
 }
 
 /* Navbar Brand */
@@ -299,37 +299,6 @@ footer p {
         font-size: 1rem; /* Slightly smaller font for smaller screens */
     }
 
-    /* Show menu icon on small screens */
-    .menu-icon {
-        display: block;
-        font-size: 1.5rem;
-        color: white;
-        cursor: pointer;
-    }
-
-    /* Navbar links for small screens */
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        flex-direction: column;
-        gap: 10px;
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 10px;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem;
-        color: white;
-    }
-
-    /* Adjusting the layout for small screens */
     .intro-container {
         flex-direction: column;
         align-items: center;
