@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jonathan Edwards' Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+        <!-- Add signature font from Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </head>
+    
+<body>
+    <!-- Particles Background (Full Screen) -->
+    <div id="particles-js"></div>
+
+    <!-- Header Section -->
+    <header>
+
+        <nav>
+            <div class="navbar-brand">
+                <span>My Online Portfolio</span>
+            </div>
+            <a href="index.html">Home</a>
+            <a href="mech.html">Engineering</a>
+            <a href="web.html">Web Development</a>
+            <a href="hack.html">Ethical Hacking</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="intro-container">
+            <!-- Left Side: Introductory Message -->
+            <div class="intro-text">
+                <p class="intro-title">
+                    Meet <span class="highlight" id="name"></span>
+                </p>
+                <p class="intro-subtitle">
+                    He is  <span id="role">a Web Developer</span> <!-- Role changes dynamically -->
+                </p>
+                
+                <!-- Education Description -->
+                <div class="education-description">
+                    <h3>Education & Achievements</h3>
+                    <p class="intro-text">
+                        I have a strong academic background that fuels my passion for technology and development. Below are the institutions and qualifications that have shaped my journey.
+                    </p>
+                    <ul class="school-tree">
+                        <li><span class="school-name">Dedan Kimathi University of Technology</span>
+                            <ul>
+                                <li><span class="degree">Bachelor of Science in Mechanical Engineering</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="school-name">Power Learn Project</span>
+                            <ul>
+                                <li><span class="course">Software Development</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="school-name">ISC2</span>
+                            <ul>
+                                <li><span class="course">Cybersecurity</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="school-name">Cisco</span>
+                            <ul>
+                                <li><span class="course">Ethical Hacker</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                
+            </div>
+        
+            <!-- Right Side: Profile Picture -->
+            <div class="profile-picture-container">
+                <img src="moi.jpg" alt="Jonathan Edwards" class="profile-picture">
+            </div>
+        </div>
+        
+    </header>
+
+
+    <!-- Main Content Section -->
+    <section class="blocks">
+        <div class="block" id="mechanical-engineer">
+            <div class="block-content">
+                <p>Mechanical Engineer</p>
+                <p class="description">Innovative solutions to real-world problems.</p>
+                <a href="mech.html" class="explore">Explore More</a>
+            </div>
+        </div>
+        <div class="block" id="web-developer">
+            <div class="block-content">
+                <p>Web Developer</p>
+                <p class="description">Crafting modern websites and applications.</p>
+                <a href="web.html" class="explore">Explore More</a>
+            </div>
+        </div>
+        <div class="block" id="ethical-hacker">
+            <div class="block-content">
+                <p>Ethical Hacker</p>
+                <p class="description">Securing systems, preventing cyber threats.</p>
+                <a href="hack.html" class="explore">Explore More</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Jonathan Edwards. All Rights Reserved.</p>
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/jonathan-edwards" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/1234567890" target="_blank" class="social-link">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://facebook.com/jonathan.edwards" target="_blank" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://twitter.com/jonathanedwards" target="_blank" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="tel:+1234567890" class="social-link">
+                    <i class="fas fa-phone-alt"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <!-- External particles config -->
+    <script src="particles-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

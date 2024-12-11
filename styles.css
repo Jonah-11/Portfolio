@@ -1,0 +1,387 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000; /* Dark background for particles effect */
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem;
+    color: white;
+    background-color: transparent;
+    position: relative; /* For particles effect layering */
+}
+
+/* Intro Text Styling */
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 200px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    text-align: left;
+    color: white;
+}
+
+.intro-text .intro-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: inline;
+    margin: 0;
+}
+
+.intro-text .intro-subtitle {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+#role {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff6600;
+}
+
+/* Profile Picture Styling */
+.profile-picture-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    height: auto;
+}
+
+/* Particles Background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #000; /* Optional for better starry sky effect */
+}
+
+/* Shooting Star Animation */
+@keyframes shootingStar {
+    0% {
+        transform: translateX(0) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100vw) translateY(50vh);
+        opacity: 0;
+    }
+}
+
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    background: linear-gradient(white, transparent);
+    animation: shootingStar 2s ease-in-out infinite;
+    opacity: 0;
+    transform: translateX(0) translateY(0);
+}
+
+/* Blocks Section */
+.blocks {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.block {
+    width: 30%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.block:hover {
+    transform: scale(1.05);
+}
+
+.block-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    background-color: rgba(210, 246, 151, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+/* Fixed Navbar */
+nav {
+    position: fixed; /* Keeps the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for visibility */
+    padding: 1rem;
+    z-index: 1000; /* Ensures the navbar stays above other content */
+    display: flex;
+    justify-content: flex-end; /* Aligns the links to the right */
+}
+
+nav a {
+    color: white; /* White text for links */
+    text-decoration: none;
+    margin-left: 20px; /* Space between links */
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff6600; /* Change link color on hover */
+}
+
+/* Adjust for content below the fixed navbar */
+body {
+    padding-top: 80px; /* Ensure the body content doesn't get hidden behind the navbar */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    color: white;
+    font-family: 'Dancing Script', cursive;  /* Apply the signature font */
+    font-size: 2rem;  /* Adjust size as needed */
+    font-weight: bold;
+    margin-right: auto;
+    padding-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff6600; /* Change link color on hover */
+}
+
+
+
+/* Education Section */
+.education-description {
+    margin: 40px 0;
+    color: #fff; /* White text for readability */
+    font-family: 'Arial', sans-serif;
+}
+
+.education-description h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff6600; /* Highlighting the section title */
+    border-bottom: 2px solid #ff6600;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+.education-description p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #dcdcdc; /* Light gray for the description */
+}
+
+.school-tree {
+    list-style: none;
+    padding-left: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #ddd;
+}
+
+.school-tree li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.school-tree li::before {
+    content: "•";
+    position: absolute;
+    left: -20px;
+    color: #ff6600;
+    font-size: 1.2rem;
+}
+
+.school-name {
+    font-weight: bold;
+    color: #ff6600; /* Bold school names in a distinct color */
+}
+
+.degree, .course {
+    font-style: italic;
+    color: #fff;
+}
+
+.school-tree ul {
+    margin-left: 20px;
+    margin-top: 10px;
+    color: #b0b0b0;
+}
+
+/* Hover Effect for Tree Items */
+.school-tree li:hover {
+    background-color: rgba(255, 102, 0, 0.1);
+    padding-left: 10px;
+    transition: padding-left 0.3s ease, background-color 0.3s ease;
+}
+
+.school-tree li:hover .school-name {
+    color: #ff4500;
+}
+
+.school-tree li:hover .degree,
+.school-tree li:hover .course {
+    color: #ffcc00;
+}
+
+/* Block Backgrounds */
+#mechanical-engineer,
+#web-developer,
+#ethical-hacker {
+    background-size: cover;
+    background-position: center;
+}
+
+#mechanical-engineer {
+    background-image: url('mechanical-background.jpg');
+}
+
+#web-developer {
+    background-image: url('web-dev-background.jpg');
+}
+
+#ethical-hacker {
+    background-image: url('ethical-hacking-background.jpg');
+}
+
+/* Explore Button */
+.explore {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #ff6600;
+    border-radius: 30px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.explore:hover {
+    background-color: #ff4500;
+}
+
+/* Particles Background */
+#particles-js {
+    position: absolute;   /* Positioning to cover the whole page */
+    top: 0;
+    left: 0;
+    width: 100%;          /* Full width of the page */
+    height: 100%;         /* Full height of the page */
+    z-index: -1;          /* Makes sure particles are behind the content */
+    background-color: #000; /* Optional, if you want a dark background for particles */
+}
+
+/* Footer Styling */
+/* Footer Styling */
+footer {
+    background-color: #333; /* Dark background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-link {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-link:hover {
+    color: #ff6600; /* Orange color on hover */
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro-text {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .profile-picture-container {
+        width: 80%;
+        margin-top: 1rem;
+    }
+
+    .blocks {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .block {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+}
