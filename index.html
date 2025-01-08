@@ -4,115 +4,161 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Edwards' Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="resources/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Particles Background -->
-    <div id="particles-js"></div>
-
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
         <nav>
-            <div class="navbar-brand">
-                <span>My Online Portfolio</span>
-            </div>
-            <div class="menu-icon">&#9776;</div>
-            <div class="nav-links" id="nav-links">
-                <a href="index.html">Home</a>
-                <a href="mech.html">Engineering</a>
-                <a href="web.html">Web Development</a>
-                <a href="hack.html">Ethical Hacking</a>
-                <a href="contact.html">Contact</a>
-            </div>
+            <div class="navbar-brand">MY ONLINE PORTFOLIO</div>
+            <a href="resources/JONATHAN EDWARDS RESUME.docx" download>Download Resume</a>
         </nav>
+    </header>
 
+    <!-- Home Section -->
+    <section id="home" class="intro">
         <div class="intro-container">
-            <!-- Left Side: Introductory Message -->
             <div class="intro-text">
-                <p class="intro-title">
-                    Meet <span class="highlight" id="name"></span>
-                </p>
-                <p class="intro-subtitle">
-                    He is  <span id="role">a Web Developer</span>
-                </p>
+                <p class="intro-title">Meet <span class="highlight" id="name"></span></p>
+                <p class="intro-subtitle">He is <span id="role">a Web Developer</span></p>
                 <div class="education-description">
                     <h3>Education & Achievements</h3>
-                    <p class="intro-text">
-                        I have a strong academic background that fuels my passion for technology and development. Below are the institutions and qualifications that have shaped my journey.
-                    </p>
                     <ul class="school-tree">
-                        <li><span class="school-name">Dedan Kimathi University of Technology</span>
-                            <ul>
-                                <li><span class="degree">Bachelor of Science in Mechanical Engineering</span></li>
-                            </ul>
-                        </li>
-                        <li><span class="school-name">Power Learn Project</span>
-                            <ul>
-                                <li><span class="course">Software Development</span></li>
-                            </ul>
-                        </li>
-                        <li><span class="school-name">ISC2</span>
-                            <ul>
-                                <li><span class="course">Cybersecurity</span></li>
-                            </ul>
-                        </li>
-                        <li><span class="school-name">Cisco</span>
-                            <ul>
-                                <li><span class="course">Ethical Hacker</span></li>
-                            </ul>
-                        </li>
+                        <li><span class="school-name">Dedan Kimathi University of Technology</span> - <span class="degree">BSc in Mechanical Engineering</span></li>
+                        <li><span class="school-name">Power Learn Project</span> - <span class="course">Software Development</span></li>
+                        <li><span class="school-name">ISC2</span> - <span class="course">Cybersecurity</span></li>
+                        <li><span class="school-name">Cisco</span> - <span class="course">Ethical Hacking</span></li>
                     </ul>
                 </div>
             </div>
-        
-            <!-- Right Side: Profile Picture -->
             <div class="profile-picture-container">
-                <img src="moi.jpg" alt="Jonathan Edwards" class="profile-picture">
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content Section -->
-    <section class="blocks">
-        <div class="block" id="mechanical-engineer">
-            <div class="block-content">
-                <p>Mechanical Engineer</p>
-                <p class="description">Innovative solutions to real-world problems.</p>
-                <a href="mech.html" class="explore">Explore More</a>
-            </div>
-        </div>
-        <div class="block" id="web-developer">
-            <div class="block-content">
-                <p>Web Developer</p>
-                <p class="description">Crafting modern websites and applications.</p>
-                <a href="web.html" class="explore">Explore More</a>
-            </div>
-        </div>
-        <div class="block" id="ethical-hacker">
-            <div class="block-content">
-                <p>Ethical Hacker</p>
-                <p class="description">Securing systems, preventing cyber threats.</p>
-                <a href="hack.html" class="explore">Explore More</a>
+                <img src="resources/moi.jpg" alt="Jonathan Edwards" class="profile-picture">
             </div>
         </div>
     </section>
-    
-    <footer>
+
+    <!-- Mechanical Engineering Section -->
+    <section id="webdev" class="content">
+        <h2>Mechanical Engineering</h2>
+        <p>Exploring real-world solutions through innovation and design.</p>
+        <div class="projects">
+            <div class="project-box">
+                <div class="project-image">
+                    <!-- Video embed for Arduino Programming -->
+                    <video id="arduino-video" width="100%" height="auto" preload="none">
+                        <source src="resources/arduino.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="project-description">
+                    <h3>Arduino Programming</h3>
+                    <p>Building embedded systems using Arduino.</p>
+                    <h3>Ultrasonic Sensor - LED Control</h3>
+                    <p>In this example, I used an ultrasonic sensor with an Arduino to control an LED based on proximity. The ultrasonic sensor detects the distance of an object in front of it, and if the object comes within a certain range, the LED is turned on. If the object moves away, the LED is turned off. This demonstrates how to interface sensors and actuators using simple Arduino programming. Such projects are useful in automation systems where proximity sensing is needed to trigger actions.</p>
+                    <!-- Button to play the video -->
+                    <button class="project-link" id="play-video-btn">Play Project Video</button>
+                </div>                
+            </div>
+            <div class="project-box" id="project-avocado-oil">
+                <div class="project-image">
+                    <img src="resources/avocado.jpg" alt="Avocado Oil Extractor">
+                </div>
+                <div class="project-description">
+                    <h3>Avocado Oil Extractor</h3>
+                    <p>Designed an avocado oil extractor that uses mechanical forces to efficiently extract oil from avocados. This project involved understanding the optimal pressure and extraction methods to maximize oil yield, while keeping the process energy-efficient and sustainable.</p>
+                </div>
+            </div>
+            <div class="project-box" id="project-maize-cob">
+                <div class="project-image">
+                    <img src="resources/cob.jpg" alt="Maize Cob Shredder">
+                </div>
+                <div class="project-description">
+                    <h3>Maize Cob Shredder</h3>
+                    <p>In a group, we designed a maize cob shredder and compactor, a project aimed at helping farmers reduce the size of maize cobs for easier storage and transport. The design maximizes efficiency and durability, making it suitable for use in agricultural settings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Web Development Section -->
+    <section id="webdev" class="content">
+        <h2>Web Development</h2>
+        <p>Designing dynamic and interactive websites.</p>
+        <div class="projects">
+            <div class="project-box">
+                <div class="project-image">
+                    <img src="resources/graph.jpg" alt="Graph Plotter">
+                </div>
+                <div class="project-description">
+                    <h3>Graph Plotter</h3>
+                    <p>An interactive tool to plot and visualize mathematical graphs.</p>
+                    <a href="https://graphplotter-jonah-11s-projects.vercel.app/" target="_blank" class="project-link">Visit Site</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-image">
+                    <img src="resources/work.jpg" alt="Workfinder">
+                </div>
+                <div class="project-description">
+                    <h3>Workfinder</h3>
+                    <p>A platform to help individuals find job opportunities based on their skills.</p>
+                    <a href="https://workfinder.netlify.app/" target="_blank" class="project-link">Visit Site</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-image">
+                    <img src="resources/expense.jpg" alt="Expense Tracker">
+                </div>
+                <div class="project-description">
+                    <h3>Expense Tracker</h3>
+                    <p>Track your finances and manage your expenses with this simple app.</p>
+                    <a href="https://the-001-finance-manager.netlify.app/" target="_blank" class="project-link">Visit Site</a>
+                </div>
+            </div>
+            <div class="project-box">
+                <div class="project-image">
+                    <img src="resources/optysearch.jpg" alt="OptySearchDigital">
+                </div>
+                <div class="project-description">
+                    <h3>OptySearchDigital</h3>
+                    <p>A digital marketing service helping businesses enhance their online presence.</p>
+                    <a href="https://optysearchdigital.com" target="_blank" class="project-link">Visit Site</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ethical Hacking Section -->
+    <section id="webdev" class="content">
+        <h2>Ethical Hacking</h2>
+        <p>Securing systems and preventing cyber threats.</p>
+        <div class="projects">
+            <div class="project-box">
+                <div class="project-description">
+                    <h3>Penetration Testing</h3>
+                    <p>Using tools like Kali Linux and Wireshark to identify vulnerabilities.</p>
+                    <img src="resources/wireshark.jpg" alt="Cisco Ethical Hacking Certificate" class="certification-img" width="500">
+                </div>
+            </div>
+        </div>
+        <div class="certification">
+            <h3>Cisco Ethical Hacking Certification</h3>
+            <img src="resources/Ethical hacking.jpg" alt="Cisco Ethical Hacking Certificate" class="certification-img" width="500">
+            <p>This certification from Cisco acknowledges my skills and expertise in ethical hacking and penetration testing. I have learned various tools and techniques for assessing and securing IT systems, web applications, and network infrastructure.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
         <p>&copy; 2024 Jonathan Edwards. All Rights Reserved.</p>
     </footer>
 
-    <script src="particles-config.js"></script>
-    <script src="script.js"></script>
-
-    <script>
-        // Toggle Navigation Menu
-        document.getElementById('menu-icon').addEventListener('click', function() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('active');
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="resources/script.js"></script>
+    <script src="resources/particles-config.js"></script>
 </body>
 </html>
