@@ -1,164 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jonathan Edwards' Portfolio</title>
-    <link rel="stylesheet" href="resources/style.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jonathan Edwards - Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="navbar-brand">MY ONLINE PORTFOLIO</div>
-            <a href="resources/JONATHAN EDWARDS RESUME.docx" download>Download Resume</a>
-        </nav>
-    </header>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="logo">Jonathan Edwards</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#cybersecurity">Cybersecurity</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="resources/JONATHAN EDWARDS RESUME.pdf" class="btn" download>Download Resume</a>
+    </div>
+  </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="intro">
-        <div class="intro-container">
-            <div class="intro-text">
-                <p class="intro-title">Meet <span class="highlight" id="name"></span></p>
-                <p class="intro-subtitle">He is <span id="role">a Web Developer</span></p>
-                <div class="education-description">
-                    <h3>Education & Achievements</h3>
-                    <ul class="school-tree">
-                        <li><span class="school-name">Dedan Kimathi University of Technology</span> - <span class="degree">BSc in Mechanical Engineering</span></li>
-                        <li><span class="school-name">Power Learn Project</span> - <span class="course">Software Development</span></li>
-                        <li><span class="school-name">ISC2</span> - <span class="course">Cybersecurity</span></li>
-                        <li><span class="school-name">Cisco</span> - <span class="course">Ethical Hacking</span></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="profile-picture-container">
-                <img src="resources/moi.jpg" alt="Jonathan Edwards" class="profile-picture">
-            </div>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="container hero-content">
+      <img src="resources/moi.jpg" alt="Jonathan Edwards" class="hero-img">
+      <div class="hero-text">
+        <h1>Hi, I'm <span class="highlight">Jonathan Edwards</span></h1>
+        <h2><span class="highlight">A Mechanical Engineering Student</span> & <span class="highlight">Cybersecurity Enthusiast</span></h2>
+        <p>Bridging the gap between mechanical systems and digital security. Passionate about building efficient machines and securing the systems that power tomorrow.</p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn">View My Work</a>
+          <a href="#contact" class="btn-outline">Get In Touch</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </header>
 
-    <!-- Mechanical Engineering Section -->
-    <section id="webdev" class="content">
-        <h2>Mechanical Engineering</h2>
-        <p>Exploring real-world solutions through innovation and design.</p>
-        <div class="projects">
-            <div class="project-box">
-                <div class="project-image">
-                    <!-- Video embed for Arduino Programming -->
-                    <video id="arduino-video" width="100%" height="auto" preload="none">
-                        <source src="resources/arduino.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="project-description">
-                    <h3>Arduino Programming</h3>
-                    <p>Building embedded systems using Arduino.</p>
-                    <h3>Ultrasonic Sensor - LED Control</h3>
-                    <p>In this example, I used an ultrasonic sensor with an Arduino to control an LED based on proximity. The ultrasonic sensor detects the distance of an object in front of it, and if the object comes within a certain range, the LED is turned on. If the object moves away, the LED is turned off. This demonstrates how to interface sensors and actuators using simple Arduino programming. Such projects are useful in automation systems where proximity sensing is needed to trigger actions.</p>
-                    <!-- Button to play the video -->
-                    <button class="project-link" id="play-video-btn">Play Project Video</button>
-                </div>                
-            </div>
-            <div class="project-box" id="project-avocado-oil">
-                <div class="project-image">
-                    <img src="resources/avocado.jpg" alt="Avocado Oil Extractor">
-                </div>
-                <div class="project-description">
-                    <h3>Avocado Oil Extractor</h3>
-                    <p>Designed an avocado oil extractor that uses mechanical forces to efficiently extract oil from avocados. This project involved understanding the optimal pressure and extraction methods to maximize oil yield, while keeping the process energy-efficient and sustainable.</p>
-                </div>
-            </div>
-            <div class="project-box" id="project-maize-cob">
-                <div class="project-image">
-                    <img src="resources/cob.jpg" alt="Maize Cob Shredder">
-                </div>
-                <div class="project-description">
-                    <h3>Maize Cob Shredder</h3>
-                    <p>In a group, we designed a maize cob shredder and compactor, a project aimed at helping farmers reduce the size of maize cobs for easier storage and transport. The design maximizes efficiency and durability, making it suitable for use in agricultural settings.</p>
-                </div>
-            </div>
+  <!-- About -->
+  <section id="about" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p>I’m a multidisciplinary student engineer with experience in both <strong>mechanical design</strong> and <strong>cybersecurity</strong>. My goal is to design systems that are not only efficient but also resilient against digital threats.</p><br>
+      <h3>Education & Achievements</h3>
+      <ul class="edu-list">
+        <li><strong>Dedan Kimathi University of Technology</strong> - BSc in Mechanical Engineering</li>
+        <li><strong>Power Learn Project</strong> - Software Development</li>
+        <li><strong>ISC2</strong> - Cybersecurity</li>
+        <li><strong>Cisco</strong> - Ethical Hacking</li>
+        <li><strong>CompTIA Security+</strong> - Certification</li>
+        <li><strong>Lockheed Martin Training Modules</strong> - (in progress, aerospace systems & cybersecurity)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+
+      <!-- Mechanical Projects -->
+      <h3 class="sub-title">Mechanical & Engineering</h3>
+      <div class="grid">
+        <div class="card">
+          <img src="resources/avocado.jpg" alt="Avocado Oil Extractor">
+          <h3>Avocado Oil Extractor</h3>
+          <p>Designed a system to efficiently extract oil using mechanical forces while maximizing yield and energy efficiency.</p>
         </div>
-    </section>
-
-
-    <!-- Web Development Section -->
-    <section id="webdev" class="content">
-        <h2>Web Development</h2>
-        <p>Designing dynamic and interactive websites.</p>
-        <div class="projects">
-            <div class="project-box">
-                <div class="project-image">
-                    <img src="resources/graph.jpg" alt="Graph Plotter">
-                </div>
-                <div class="project-description">
-                    <h3>Graph Plotter</h3>
-                    <p>An interactive tool to plot and visualize mathematical graphs.</p>
-                    <a href="https://graphplotter-jonah-11s-projects.vercel.app/" target="_blank" class="project-link">Visit Site</a>
-                </div>
-            </div>
-            <div class="project-box">
-                <div class="project-image">
-                    <img src="resources/work.jpg" alt="Workfinder">
-                </div>
-                <div class="project-description">
-                    <h3>Workfinder</h3>
-                    <p>A platform to help individuals find job opportunities based on their skills.</p>
-                    <a href="https://workfinder.netlify.app/" target="_blank" class="project-link">Visit Site</a>
-                </div>
-            </div>
-            <div class="project-box">
-                <div class="project-image">
-                    <img src="resources/expense.jpg" alt="Expense Tracker">
-                </div>
-                <div class="project-description">
-                    <h3>Expense Tracker</h3>
-                    <p>Track your finances and manage your expenses with this simple app.</p>
-                    <a href="https://the-001-finance-manager.netlify.app/" target="_blank" class="project-link">Visit Site</a>
-                </div>
-            </div>
-            <div class="project-box">
-                <div class="project-image">
-                    <img src="resources/optysearch.jpg" alt="OptySearchDigital">
-                </div>
-                <div class="project-description">
-                    <h3>OptySearchDigital</h3>
-                    <p>A digital marketing service helping businesses enhance their online presence.</p>
-                    <a href="https://optysearchdigital.com" target="_blank" class="project-link">Visit Site</a>
-                </div>
-            </div>
+        <div class="card">
+          <img src="resources/cob.jpg" alt="Maize Cob Shredder">
+          <h3>Maize Cob Shredder</h3>
+          <p>Designed with a team to help farmers shred maize cobs for easier storage and transport.</p>
         </div>
-    </section>
-
-    <!-- Ethical Hacking Section -->
-    <section id="webdev" class="content">
-        <h2>Ethical Hacking</h2>
-        <p>Securing systems and preventing cyber threats.</p>
-        <div class="projects">
-            <div class="project-box">
-                <div class="project-description">
-                    <h3>Penetration Testing</h3>
-                    <p>Using tools like Kali Linux and Wireshark to identify vulnerabilities.</p>
-                    <img src="resources/wireshark.jpg" alt="Cisco Ethical Hacking Certificate" class="certification-img" width="500">
-                </div>
-            </div>
+        <div class="card">
+          <img src="resources/arduino.jpg" alt="Ultrasonic sensor">
+          <h3>Arduino Ultrasonic Sensor</h3>
+          <p>Controlled an LED using proximity sensing with Arduino and ultrasonic sensors.</p>
         </div>
-        <div class="certification">
-            <h3>Cisco Ethical Hacking Certification</h3>
-            <img src="resources/Ethical hacking.jpg" alt="Cisco Ethical Hacking Certificate" class="certification-img" width="500">
-            <p>This certification from Cisco acknowledges my skills and expertise in ethical hacking and penetration testing. I have learned various tools and techniques for assessing and securing IT systems, web applications, and network infrastructure.</p>
+      </div>
+
+      <!-- Tech Projects -->
+      <h3 class="sub-title">Software & Tech</h3>
+      <div class="grid">
+        <div class="card">
+          <img src="resources/graph.jpg" alt="Graph Plotter">
+          <h3>Graph Plotter</h3>
+          <a href="https://graphplotter-jonah-11s-projects.vercel.app/" target="_blank">Visit Site</a>
         </div>
-    </section>
+        <div class="card">
+          <img src="resources/work.jpg" alt="Workfinder">
+          <h3>Workfinder</h3>
+          <a href="https://workfinder.netlify.app/" target="_blank">Visit Site</a>
+        </div>
+        <div class="card">
+          <img src="resources/expense.jpg" alt="Expense Tracker">
+          <h3>Expense Tracker</h3>
+          <a href="https://the-001-finance-manager.netlify.app/" target="_blank">Visit Site</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <p>&copy; 2024 Jonathan Edwards. All Rights Reserved.</p>
-    </footer>
+  <!-- Experience -->
+  <section id="experience" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Work History</h2>
 
-    <!-- Scripts -->
-    <script src="resources/script.js"></script>
-    <script src="resources/particles-config.js"></script>
+      <div class="experience-cards">
+        <div class="card">
+          <h3>Mechanical Engineering Attachee – Skyward Airlines, Wilson Airport (Feb 2024 – Apr 2024)</h3>
+          <ol class="experience-list">
+            <li>Participated in aircraft maintenance operations, including A-checks and C-checks per KCAA protocols.</li>
+            <li>Worked on flight control surfaces such as flaps and assisted in servicing deicing boots on turboprop aircraft.</li>
+            <li>Followed airworthiness and safety-critical inspection procedures using Aircraft Maintenance Manuals (AMMs).</li>
+            <li>Maintained aviation security through tool accountability, area clearance procedures, and part traceability.</li>
+            <li>Logged maintenance activities and supported engineering documentation for compliance audits.</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h3>Cybersecurity Virtual Experience – Mastercard (Dec 2024)</h3>
+          <ol class="experience-list">
+            <li>Completed a job simulation as an analyst on Mastercard’s Security Awareness Team.</li>
+            <li>Helped identify and report security threats such as phishing.</li>
+            <li>Analyzed areas of the business needing stronger security and developed targeted training courses and procedures.</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h3>Mechanical Engineering Attachee – Dedan Kimathi University of Technology (Jan 2024 – Dec 2024)</h3>
+          <ol class="experience-list">
+            <li>Designed and optimized machine components using CAD, cutting material waste by 15% in CNC fabrication.</li>
+            <li>Operated lathe, milling, and drilling machines to produce mechanical parts.</li>
+            <li>Performed arc welding for structural joints in lab-scale mechanical assemblies.</li>
+            <li>Installed and serviced basic electrical systems within the university mechanical workshop.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cybersecurity -->
+  <section id="cybersecurity" class="section">
+    <div class="container">
+      <h2 class="section-title">Cybersecurity Expertise</h2>
+      <div class="grid">
+        <div class="card small-card">
+          <h3>Cisco Ethical Hacking Certification</h3>
+          <img src="resources/Ethical hacking.jpg" alt="Cisco Ethical Hacking Certificate">
+          <p>Trained in penetration testing tools such as Kali Linux & Wireshark.</p>
+        </div>
+        <div class="card small-card">
+          <h3>Specializations</h3>
+          <ul>
+            <li>Industrial Control Systems Security</li>
+            <li>Penetration Testing</li>
+            <li>Risk Assessment</li>
+            <li>Malware Analysis & Reverse Engineering</li>
+          </ul>
+        </div>
+        <div class="card small-card">
+          <h3>Certifications</h3>
+          <p>CompTIA Security+, ISC2 Cybersecurity, CEH (in progress)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>🔧 Engineering Tools</h3>
+        <ul class="skill-list">
+          <li>SolidWorks</li>
+          <li>AutoCAD</li>
+          <li>MATLAB</li>
+          <li>Inventor</li>
+          <li>Python, C, C++ Programming</li>
+          <li>3D Printing</li>
+          <li>CNC Machining</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>🛡️ Security Tools</h3>
+        <ul class="skill-list">
+          <li>Wireshark</li>
+          <li>Nmap</li>
+          <li>Metasploit</li>
+          <li>Burp Suite</li>
+          <li>Kali Linux</li>
+          <li>Python</li>
+          <li>PowerShell</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+<section id="contact" class="section bg-light">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <p>If you’d like to collaborate on engineering, tech, or cybersecurity projects — let’s connect!</p>
+    
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <p><i class="fas fa-envelope"></i> 
+        <a href="mailto:engineer@example.com">engineer@example.com</a>
+      </p>
+      <p><i class="fab fa-whatsapp"></i> 
+        <a href="https://wa.me/254799610782" target="_blank">+254 799 610 782</a>
+      </p>
+    </div>
+
+    <!-- Social Links -->
+    <div class="socials">
+      <a href="https://github.com/jonah-11" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jonathan-edwards-147541318/" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="https://wa.me/254799610782" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="mailto:edwardsjonathan457@gmail.com" title="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>&copy; 2025 Jonathan Edwards. Built with ❤️</p>
+    </div>
+  </footer>
 </body>
 </html>
